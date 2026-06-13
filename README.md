@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Cannabis Store • Exclusive CBD Boutique (Málaga Centro)
 
-## Getting Started
+An e-commerce platform and premium digital catalog built for **The Cannabis Store**, located in Málaga Centro. The application features a strict age-verification gate, real-time localized product filtering, and a direct conversion tunnel powered by automated instant messaging workflows.
 
-First, run the development server:
+🔗 **Live Demo:** [https://cbd-malaga.vercel.app](https://cbd-malaga.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Architecture & Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is built using a modern **Headless CMS / Decoupled Architecture**, ensuring ultra-fast load times, solid security, and maximum scalability by isolating the content lake from the presentation layer:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend Framework:** Next.js 15+ (App Router) utilizing Turbopack for lightning-fast compilation and optimized page delivery.
+- **Styling & UI:** Tailwind CSS, featuring a bespoke, minimal "Total Black" visual language with desaturated gold accents (`#c0a97a`), premium serif typography, and cohesive component-level hover interactions.
+- **Headless Backend:** Sanity CMS (Content Lake), structured with localized query parameters and strict schema schemas with data validation.
+- **Data Querying:** GROQ (Graph-Relational Object Queries) to fetch clean, lightweight payloads directly from the CMS edge.
+- **Deployment & Hosting:** Vercel Cloud Platform, fully integrated with Next.js Edge Network for asset optimization and global caching.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Repository Structure & Key Modules
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The repository's directory layout follows Clean Architecture conventions for Next.js and Sanity:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+cbd-malaga/
+├── app/
+│   ├── catalogo/
+│   │   └── [slug]/         # Dynamic routing for detailed, SEO-friendly product views
+│   ├── components/
+│   │   ├── CatalogSection  # React client component managing active states & unmapped category filters
+│   │   └── WhatsAppBtn     # High-conversion CTA utilizing encoded URI parameters for order processing
+│   ├── page.tsx            # Server-side entry point fetching content from Sanity Content Lake
+│   └── layout.tsx          # App Shell, global style injections, and metadata configuration
+├── sanity/
+│   ├── schemaTypes/
+│   │   ├── index.ts        # Content Studio core schema registry
+│   │   └── producto.ts     # Document schema defining validation constraints, image hotspots, and price mins
+│   ├── env.ts              # Decoupled dataset configuration layer
+│   └── structure.ts        # Custom Sanity Desk Studio layout hierarchy
+├── next.config.ts          # Core framework settings, including remotePatterns security policies for media CDNs
+└── .env.example            # Blueprint for environment variables declaration
