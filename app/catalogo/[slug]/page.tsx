@@ -32,7 +32,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const resolvedParams = await params;
   const prod = await getSingleProduct(resolvedParams.slug);
 
-  const MI_TELEFONO_WHATSAPP = "34742045505"; // Tu número configurado
+  const MI_TELEFONO_WHATSAPP = "34742045329"; // Tu número configurado
 
   // Si el producto no existe o está sin stock, mostramos un error elegante
   if (!prod) {

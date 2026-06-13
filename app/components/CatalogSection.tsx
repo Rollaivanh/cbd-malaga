@@ -3,7 +3,7 @@
 import { useState } from "react";
 import WhatsAppBtn from "./WhatsAppBtn";
 import Link from "next/link";
-import Image from "next/image"; // <--- Optimización de rendimiento
+import Image from "next/image"; 
 
 interface Producto {
   _id: string;
