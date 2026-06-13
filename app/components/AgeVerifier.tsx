@@ -53,7 +53,7 @@ export default function AgeVerifier() {
             Cannabis
           </h2>
           <p className="text-xs tracking-[0.5em] text-[#c0a97a] uppercase font-light pt-0.5">
-            FACTORY
+            STORE
           </p>
         </div>
 
