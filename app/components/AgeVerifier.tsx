@@ -33,7 +33,7 @@ export default function AgeVerifier() {
     <div className="fixed inset-0 bg-[#0a0a0a] z-50 flex flex-col items-center justify-center p-6 select-none antialiased">
       <div className="absolute inset-4 border border-zinc-900/60 pointer-events-none flex flex-col justify-between p-4">
         <div className="flex justify-between text-[10px] tracking-[0.3em] text-zinc-700 uppercase font-light">
-          <span>TCF • Est. 2026</span>
+          <span>TCS • Est. 2026</span>
           <span>Boutique</span>
         </div>
         <div className="flex justify-between text-[10px] tracking-[0.3em] text-zinc-700 uppercase font-light">
@@ -42,9 +42,7 @@ export default function AgeVerifier() {
         </div>
       </div>
 
-      {/* Contenedor del Mensaje */}
       <div className="max-w-md w-full text-center space-y-10 z-10 px-4">
-        {/* Logotipo Serif Reducido */}
         <div className="space-y-1">
           <p className="text-[10px] tracking-[0.4em] text-[#c0a97a] uppercase font-light">
             T H E
