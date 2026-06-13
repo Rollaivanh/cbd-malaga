@@ -53,12 +53,12 @@ cd cbd-malaga
 Bash
 npm install
 3. Environment Variables Configuration
-Create a .env.local file in the root directory. Populate it with your Sanity credentials and store target destination:
+Create a .env.local file in the root directory. This project decouples sensitive parameters from the codebase. Populate it using the following template format:
 
 Fragmento de código
-NEXT_PUBLIC_SANITY_PROJECT_ID=sdk4jnq9
-NEXT_PUBLIC_SANITY_DATASET=production
-NEXT_PUBLIC_WHATSAPP_PHONE=34742045505
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
+NEXT_PUBLIC_SANITY_DATASET=your_dataset_name
+NEXT_PUBLIC_WHATSAPP_PHONE=your_destination_phone_number
 4. Run the Development Server
 Launch the local compiler using Turbopack:
 
